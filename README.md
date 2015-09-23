@@ -1,4 +1,4 @@
-<img align="left" src="http://i.imgur.com/dwGANBc.png">
+<img align="left" height="100" src="http://i.imgur.com/dwGANBc.png">
 # flourish
 
 A Chrome extension for enhancing a few core features of Blossom for improved usability and productivity.
