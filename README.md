@@ -6,7 +6,7 @@ A Chrome extension for enhancing a few core features of Blossom for improved usa
 ### Collaborators Box v2.0
 Transforms the face image tiles into rows of faces with names, which are sorted alphabetically, making is significantly easier to find a given person.
 
-![Collaborators Box v2.0](http://i.imgur.com/qzqqA5I.png)
+![Collaborators Box v2.0](https://lh3.googleusercontent.com/s2Jw76A0oDLoHxU2wkkcpcFpdwO0VpBj5gnwPXjwDi-LWEuQeVYYuRjWg5WZhVlIPEpWKcv6jw=s1280-h800-e365-rw)
 
 ---
 
