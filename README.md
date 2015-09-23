@@ -1,4 +1,4 @@
-# flourish
+# ![Flourish Logo](http://i.imgur.com/dwGANBc.png) flourish
 A Chrome extension for enhancing a few core features of Blossom for improved usability and productivity.
 
 ### Collaborators Box v2.0
