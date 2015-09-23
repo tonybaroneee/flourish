@@ -7,6 +7,10 @@
   display: none !important;
 }
 
+.x-card-collaborators-info-text {
+  display: none;
+}
+
 .x-collaborator-select-active-image,
 .x-collaborator-select-inactive-image {
   width: 30px;
@@ -20,4 +24,20 @@
 
 .x-card-collaborators-editor .x-card-collaborators-select {
   display: block;
+}
+
+input[type="text"].people-search {
+  width: 100%;
+  font-size: 14px;
+  cursor: text;
+  border-color: transparent;
+  border-bottom-color: #ccc;
+  margin-bottom: 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input[type="text"].people-search:focus {
+  border-color: transparent;
+  border-bottom-color: #ccc;
 }

@@ -20,13 +20,20 @@ function runFlourish(evt) {
         });
       };
 
+      var cleanupCollabState = function() {
+        $('.people-search').val('');
+        $('.x-card-collaborators-select').show();
+      };
+
       // On people picker open, fix up people items.
       $(document).on('click', '.x-card-collaborators-launch-area', function(e) {
         var $people = $('.x-card-collaborators-editor'),
-          $peopleli = $people.children('.x-card-collaborators-select');
+          $peopleItems = $people.children('.x-card-collaborators-select');
+
+        // Touch up collab picker on show, if it hasn't been done yet, or has been destroyed.
         if ($people.is(':visible') && !$people.data('fixed-up')) {
-          addNames($peopleli);
-          $peopleli.sort(function(a, b) {
+          addNames($peopleItems);
+          $peopleItems.sort(function(a, b) {
             var an = $(a).find('.x-collaborator-select-tooltip-content').text().toUpperCase(),
               bn = $(b).find('.x-collaborator-select-tooltip-content').text().toUpperCase();
 
@@ -38,10 +45,34 @@ function runFlourish(evt) {
             }
             return 0;
           });
+          $peopleItems.detach().appendTo($people);
 
-          $peopleli.detach().appendTo($people);
+          // Add text search
+          $people.prepend($('<input />')
+            .attr('type', 'text')
+            .attr('placeholder', 'Find someone...')
+            .addClass('people-search')
+          );
+
           $people.data('fixed-up', true);
         }
+
+        // Auto-focus search
+        cleanupCollabState();
+        setTimeout(function() {
+          $('.people-search').focus();
+        }, 0);
+      });
+
+      // Respond to keystrokes in people search
+      $(document).on('keyup', '.people-search', function(e) {
+        var searchInput = e.currentTarget.value.toLowerCase();
+        $('.x-card-collaborators-select').each(function(i, el) {
+          var $el = $(el),
+            match = $el.find('.x-collaborator-select-tooltip-content').text().toLowerCase().indexOf(searchInput) > -1
+          if (match) $el.show()
+          else $el.hide()
+        });
       });
 
       // Hack to fix people names upon selection/de-selection (since we can't use click listeners)

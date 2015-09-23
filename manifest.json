@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Flourish",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple usability improvements for Blossom.",
   "icons": {
     "128": "images/flourish128.png"
