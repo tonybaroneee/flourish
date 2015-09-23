@@ -1,0 +1,23 @@
+.x-collaborator-select-active-tick {
+  left: 2px;
+  right: auto;
+}
+
+.b-hover-tooltip-tooltip-wrapper {
+  display: none !important;
+}
+
+.x-collaborator-select-active-image,
+.x-collaborator-select-inactive-image {
+  width: 30px;
+  height: 30px;
+}
+
+.x-card-collaborators-select:hover,
+.x-collaborator-select-inactive {
+  filter: none !important;
+}
+
+.x-card-collaborators-editor .x-card-collaborators-select {
+  display: block;
+}

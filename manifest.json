@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Flourish",
+  "version": "1.0.0",
+  "description": "Simple usability improvements for Blossom.",
+  "icons": {
+    "128": "images/flourish128.png"
+  },
+  "page_action": {
+    "default_icon": "images/flourish38.png"
+  },
+  "permissions" : [
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.blossom.io/*", "https://blossom.io/*"],
+      "css": ["flourish.css"],
+      "js": ["extension.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": ["flourish.js"]
+}
