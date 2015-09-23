@@ -1,7 +1,7 @@
 <img align="left" height="100" src="http://i.imgur.com/dwGANBc.png">
 # flourish
 
-A Chrome extension for enhancing Blossom for improved usability and productivity.
+A Chrome extension that enhances Blossom for improved usability and productivity.
 
 ### Collaborators Box v2.0
 - Transforms the face image tiles into rows of faces with names, sorted alphabetically, making is significantly easier to find a given person.
