@@ -5,7 +5,7 @@ A Chrome extension for enhancing a few core features of Blossom for improved usa
 Transforms the face image tiles into rows of faces with names, which are sorted alphabetically, making is significantly easier to find a given person.
 
 Preview:
-![Collaborators Box v2.0](http://imgur.com/D46fssm)
+![Collaborators Box v2.0](http://imgur.com/D46fssm.png)
 
 ---
 
