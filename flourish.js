@@ -36,13 +36,8 @@ function runFlourish(evt) {
           $peopleItems.sort(function(a, b) {
             var an = $(a).find('.x-collaborator-select-tooltip-content').text().toUpperCase(),
               bn = $(b).find('.x-collaborator-select-tooltip-content').text().toUpperCase();
-
-            if (an > bn) {
-              return 1;
-            }
-            if (an < bn) {
-              return -1;
-            }
+            if (an > bn) return 1;
+            if (an < bn) return -1;
             return 0;
           });
           $peopleItems.detach().appendTo($people);
