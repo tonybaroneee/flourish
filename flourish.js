@@ -20,6 +20,7 @@ function runFlourish(evt) {
         });
       };
 
+      // Helper function to reset potential dirty state of the collab box
       var cleanupCollabState = function() {
         $('.people-search').val('');
         $('.x-card-collaborators-select').show();
