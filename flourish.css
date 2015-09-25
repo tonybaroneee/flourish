@@ -41,3 +41,7 @@ input[type="text"].people-search:focus {
   border-color: transparent;
   border-bottom-color: #ccc;
 }
+
+.match-highlight {
+  background-color: #ffff00;
+}
