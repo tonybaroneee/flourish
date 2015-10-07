@@ -65,9 +65,18 @@ function runFlourish(evt) {
         var searchInput = e.currentTarget.value.toLowerCase();
         $('.x-card-collaborators-select').each(function(i, el) {
           var $el = $(el),
-            match = $el.find('.x-collaborator-select-tooltip-content').text().toLowerCase().indexOf(searchInput) > -1
-          if (match) $el.show()
-          else $el.hide()
+            $contentEl = $el.find('.name-text'),
+            text = $contentEl.text().trim(),
+            index = text.toLowerCase().indexOf(searchInput),
+            isMatch = index > -1;
+          if (isMatch) {
+            $contentEl.html(makeHighlightHtml(text, index, index + searchInput.length));
+            $el.show();
+          }
+          else {
+            $el.hide();
+            $contentEl.html($contentEl.text());
+          }
         });
       });
 
@@ -77,5 +86,12 @@ function runFlourish(evt) {
         addNames($('.x-card-collaborators-select'));
       }, 111);
     }
+  }
+
+  function makeHighlightHtml(text, startIndex, endIndex) {
+    var prefix = text.substring(0, startIndex),
+      match = text.substring(startIndex, endIndex),
+      suffix = text.substring(endIndex);
+    return prefix + '<span class="match-highlight">' + match + '</span>' + suffix;
   }
 }
