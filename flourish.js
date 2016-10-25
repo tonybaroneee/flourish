@@ -11,6 +11,7 @@ function runFlourish(evt) {
   var $;
   var pollStagesInterval;
   var sessionToken;
+  var boardId;
 
   function isJQueryReady() {
     if (typeof window.jQuery !== "undefined") {
@@ -20,7 +21,7 @@ function runFlourish(evt) {
 
       improveCollaborationBox();
       listenForCardClicks();
-      pollStagesInterval = setInterval(pollStages, 5 * 1000); // 1 minute
+      pollStagesInterval = setInterval(pollStages, 60 * 1000); // 1 minute
     }
   }
 
@@ -134,7 +135,12 @@ function runFlourish(evt) {
       return;
     }
 
-    var boardId = urlParts[urlParts.length - 2];
+    // We've changed boards since last call so stages and cards
+    // will be different. Don't trigger a reload
+    if (boardId && boardId !== urlParts[urlParts.length - 2]) {
+      resetStagesOnNextCall = true;
+    }
+    boardId = urlParts[urlParts.length - 2];
     activelyPollingStages = true;
 
     $.ajax({
