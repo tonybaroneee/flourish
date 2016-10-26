@@ -11,6 +11,10 @@ Grab it here: [Chrome Web Store](https://chrome.google.com/webstore/detail/flour
 
 ![Search Box](https://cloud.githubusercontent.com/assets/844249/10051405/3c6768fc-61ef-11e5-94fe-9aa2f13253f0.png)
 
+### Automatically reload board
+- Allows your Blossom board to update when there is update made on the server. No more needing to hit refresh to see if your board has changed.
+- Won't refresh while you're in the middle of moving cards.
+
 ---
 
 #### Support
